@@ -1,30 +1,34 @@
 package com.company;
 
-public class LawnmoverShop {
-
+public class LawnmowerShop {
     public static void main(String[] args) {
-    Lawmoverr Siemenc = new Lawmoverr();
-    Lawmoverr Husqvarna= new Lawmoverr(250,6000,"xs1500",1500,2000,30,220,"France","green");
-    Lawmoverr Sip=new Lawmoverr(45,1200,"newlight",2000);
-    Siemenc.toString();
-        System.out.println("                         ");
-        Husqvarna.toString();
-        System.out.println("                         ");
-        Sip.toString();
-        System.out.println("                         ");
-    
-        Lawmoverr.printStaticVoltage();
-        Husqvarna.printVoltage();
-        System.out.println("                         ");
-        
-        Lawmoverr[] someLawnmowers = new Lawmoverr[4];
-for(int count=0;count<4;count++) {
-  someLawnmowers[count]= new Lawmoverr();
+        Lawnmover siemenc = new Lawnmover();
+        Lawnmover husqvarna = new Lawnmover(250, 6000, "xs1500", 1500,
+                2000, 30, 220, "France", "green");
+        Lawnmover sip = new Lawnmover(45, 1200, "newlight", 2000);
+        siemenc.toString();
+        System.out.println("----------------------");
+        husqvarna.toString();
+        System.out.println("----------------------");
+        sip.toString();
+        System.out.println("----------------------");
+
+        Lawnmover.printStaticVoltage();
+        husqvarna.printVoltage();
+        System.out.println("----------------------");
+
+        Lawnmover[] someLawnmowers = new Lawnmover[4];
+        for (int count = 0; count < 4; count++) {
+            someLawnmowers[count] = new Lawnmover();
+        }
+
+        for (Lawnmover lawnmower : someLawnmowers) {
+            lawnmower.toString();
+            System.out.println("----------------------");
+
+        }
+
+
+    }
 }
 
-for (Lawmoverr equal: someLawnmowers) {
-    equal.toString();
-    System.out.println("                               ");
-                          }
-          }    
-}
